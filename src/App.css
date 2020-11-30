@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+* {
+	padding: 0%;
+	margin: 0%;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+body {
+	width: 100%;
+	min-height: 100vh;
+}
+.container-wrapper {
+	max-width: 1240px;
+	width: 100%;
+	margin: 10px auto;
+	padding: 0 16px;
+	border-radius: 4px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header */
+.container-header {
+	width: calc(100% - 32px);
+	padding: 1em 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #a198987a;
+	border-radius: 4px;
+}
+.container-header h1 {
+	font-weight: bolder;
+	font-family: "Monospace", sans-serif;
+	color: #078d4e;
+}
+.container-header .buttons {
+	padding: 5px 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn {
+	width: 100%;
+	padding: 4px 16px;
+	border-radius: 4px;
+	background: #f2f2f2;
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+	text-align: center;
+	border: 2px solid #333;
+	cursor: pointer;
+}
+.buttons .btn-signup {
+	margin-top: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Posts */
+.posts {
+	margin: 1rem auto;
+}
+.post-wrapper {
+	width: calc(100% - 32px);
+	border: 2px solid #181717;
+	padding: 10px 14px;
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 1em;
+	position: relative;
+}
+.post_title {
+	text-transform: capitalize;
+}
+.post_body {
+	flex: 1;
+}
+.post_body p {
+	margin: 5px 0;
+	max-width: 700px;
+	width: 80%;
+	overflow: hidden;
+	color: #333;
+	font-size: 18px;
+}
+.viewMore {
+	width: 140px;
+	margin-top: 1em;
+}
+.post-data {
+	flex: 1;
+}
+.post-wrapper .post-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	/* align-items: center; */
 }
 
-.App-link {
-  color: #61dafb;
+.btn-comments {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 140px;
+	margin-bottom: 1rem;
+	margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.singleComment {
+	margin: 10px 16px;
+}
+
+.singleComment .username {
+	font-size: 14px;
+	color: #000;
+	margin: 7px 0;
 }
